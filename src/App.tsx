@@ -123,7 +123,7 @@ function App() {
               }`}
             >
               <MessageCircle size={18} />
-              <span className="font-medium">Immigration Q&A</span>
+              <span className="font-medium">Parctice Q&A</span>
             </button>
             
             <button
