@@ -1,6 +1,6 @@
 # 🎓 Thai Language Practice
 
-> Master essential Thai for your immigration interview
+> Master essential Thai for your Thai interview
 
 A modern, interactive web application built with React, TypeScript, and Vite to help learners master essential Thai language skills through structured lessons, quizzes, and vocabulary practice.
 
@@ -27,7 +27,7 @@ Interactive quizzes to test your knowledge with:
 Conversational practice section for interview preparation
 
 ### 📋 Interview Questions
-Curated list of common immigration interview questions in Thai
+Curated list of common interview questions in Thai
 
 ### 📖 Sample Vocabulary
 Comprehensive vocabulary organized by categories:
@@ -156,7 +156,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Thai language resources and native speakers for vocabulary verification
-- Immigration interview preparation materials
+- Thai language interview preparation materials
 - The React and Vite communities for excellent documentation
 
 ## 📧 Contact
@@ -165,4 +165,4 @@ For questions or feedback, please open an issue on GitHub or contact the reposit
 
 ---
 
-Made with ❤️ for Thai language learners preparing for immigration interviews
+Made with ❤️ for Thai language learners preparing for thai language interviews
