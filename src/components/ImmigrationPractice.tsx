@@ -179,7 +179,7 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
             <div className="text-center">
               <h3 className="text-2xl font-bold text-gray-800 mb-4">Full Interview Simulation</h3>
               <p className="text-gray-600 mb-6">
-                Practice answering all questions in sequence, just like a real immigration interview
+                Practice answering all questions in sequence, just like a real language interview
               </p>
             </div>
 
