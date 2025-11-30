@@ -1,0 +1,817 @@
+import { ImmigrationQuestion } from '../types';
+
+export const interviewQuestions: ImmigrationQuestion[] = [
+  // First Extension Questions (1-38)
+  {
+    id: 'introduce-yourself',
+    questionThai: 'แนะนำตัว',
+    questionPhonetic: 'nɛ́nam tua',
+    questionEnglish: 'Please introduce yourself.',
+    answerThai: 'สวัสดีครับ/ค่ะ ฉัน/ผมชื่อ [ชื่อ] อายุ [อายุ] ปี มาจากประเทศ [ประเทศ] ชอบอาหาร/สี [อาหาร/สี]',
+    answerTemplate: 'sawàtdii khráp/khâ + name + age + country + favorite food/color',
+    answerPhonetic: 'sawàtdii khráp/khâ chǎn/phǒm chʉ̂ʉ [name] aayú [age] pii maa càak pràthêet [country] chɔ̂ɔp [food/color]',
+    answerEnglish: 'Hello, my name is [name]. I am [age] years old. I come from [country]. I like [food/color].',
+    category: 'introduction'
+  },
+  {
+    id: 'name-question',
+    questionThai: 'คุณชื่ออะไร',
+    questionPhonetic: 'khun chʉ̂ʉ àray',
+    questionEnglish: 'What is your name?',
+    answerThai: 'ฉัน/ผมชื่อ [ชื่อ]',
+    answerTemplate: 'chǎn/phǒm chʉ̂ʉ [name]',
+    answerPhonetic: 'chǎn/phǒm chʉ̂ʉ [name]',
+    answerEnglish: 'My name is [name].',
+    category: 'personal'
+  },
+  {
+    id: 'age-question',
+    questionThai: 'คุณอายุเท่าไหร่',
+    questionPhonetic: 'khun aayú thâwrày',
+    questionEnglish: 'How old are you?',
+    answerThai: 'ฉัน/ผมอายุ [อายุ] ปี',
+    answerTemplate: 'chǎn/phǒm aayú [age] pii',
+    answerPhonetic: 'chǎn/phǒm aayú [age] pii',
+    answerEnglish: 'I am [age] years old.',
+    category: 'personal'
+  },
+  {
+    id: 'country-origin',
+    questionThai: 'มาจากประเทศอะไร',
+    questionPhonetic: 'maa càak pràthêet àray',
+    questionEnglish: 'What country do you come from?',
+    answerThai: 'ฉัน/ผมมาจากประเทศ [ประเทศ]',
+    answerTemplate: 'chǎn/phǒm maa càak pràthêet [country]',
+    answerPhonetic: 'chǎn/phǒm maa càak pràthêet [country]',
+    answerEnglish: 'I came from [country].',
+    category: 'background'
+  },
+  {
+    id: 'months-in-thailand',
+    questionThai: 'คุณมาประเทศไทยกี่เดือนแล้ว',
+    questionPhonetic: 'khun maa pràthêet thay kìi dʉan lɛ́ɛw',
+    questionEnglish: 'How many months have you been in Thailand?',
+    answerThai: 'ฉัน/ผมอยู่ประเทศไทย [จำนวน] เดือนแล้ว',
+    answerTemplate: 'chǎn/phǒm yùu pràthêet thay [number] dʉan lɛ́ɛw',
+    answerPhonetic: 'chǎn/phǒm yùu pràthêet thay [number] dʉan lɛ́ɛw',
+    answerEnglish: 'I have been living in Thailand for [number] months already.',
+    category: 'stay'
+  },
+  {
+    id: 'when-came-thailand',
+    questionThai: 'คุณมาประเทศไทยเมื่อไหร่',
+    questionPhonetic: 'khun maa pràthêet thay mʉ̂arày',
+    questionEnglish: 'When did you come to Thailand?',
+    answerThai: 'ฉัน/ผมมาประเทศไทย [จำนวน] เดือนที่แล้ว / เดือน [ชื่อเดือน]',
+    answerTemplate: 'chǎn/phǒm maa pràthêet thay [number] dʉan thîi lɛ́ɛw / dʉan [month]',
+    answerPhonetic: 'chǎn/phǒm maa pràthêet thay [number] dʉan thîi lɛ́ɛw / dʉan [month]',
+    answerEnglish: 'I came to Thailand [number] months ago / in [month].',
+    category: 'background'
+  },
+  {
+    id: 'why-thailand',
+    questionThai: 'ทำไมมาประเทศไทย',
+    questionPhonetic: 'tham may maa pràthêet thay',
+    questionEnglish: 'Why did you come to Thailand?',
+    answerThai: 'เพราะฉัน/ผมมาเรียนภาษาไทย / เพราะฉัน/ผมชอบประเทศไทย',
+    answerTemplate: 'phrɔ́ chǎn/phǒm maa rian phaasǎa thay / phrɔ́ chǎn/phǒm chɔ̂ɔp pràthêet thay',
+    answerPhonetic: 'phrɔ́ chǎn/phǒm maa rian phaasǎa thay / phrɔ́ chǎn/phǒm chɔ̂ɔp pràthêet thay',
+    answerEnglish: 'Because I came to study Thai language / Because I like Thailand.',
+    category: 'purpose'
+  },
+  {
+    id: 'why-like-thailand',
+    questionThai: 'ทำไมชอบประเทศไทย',
+    questionPhonetic: 'tham may chɔ̂ɔp pràthêet thay',
+    questionEnglish: 'Why do you like Thailand?',
+    answerThai: 'เพราะอาหารไทยอร่อยและคนไทยใจดี',
+    answerTemplate: 'phrɔ́ aahǎan thay arɔ̀y lɛ́ khon thay cay dii',
+    answerPhonetic: 'phrɔ́ aahǎan thay arɔ̀y lɛ́ khon thay cay dii',
+    answerEnglish: 'Because Thai food is delicious and Thai people are kind.',
+    category: 'preferences'
+  },
+  {
+    id: 'study-language',
+    questionThai: 'เรียนภาษาอะไร',
+    questionPhonetic: 'rian phaasǎa àray',
+    questionEnglish: 'What language do you study?',
+    answerThai: 'ฉัน/ผมเรียนภาษาไทย',
+    answerTemplate: 'chǎn/phǒm rian phaasǎa thay',
+    answerPhonetic: 'chǎn/phǒm rian phaasǎa thay',
+    answerEnglish: 'I study Thai language.',
+    category: 'education'
+  },
+  {
+    id: 'study-thai-confirm',
+    questionThai: 'เรียนภาษาไทยใช่ไหม',
+    questionPhonetic: 'rian phaasǎa thay chây mǎy',
+    questionEnglish: 'You study Thai language, yes?',
+    answerThai: 'ใช่',
+    answerTemplate: 'chây',
+    answerPhonetic: 'chây',
+    answerEnglish: 'Yes.',
+    category: 'education'
+  },
+  {
+    id: 'study-days',
+    questionThai: 'เรียนวันไหน',
+    questionPhonetic: 'rian wan nǎy',
+    questionEnglish: 'What day do you study?',
+    answerThai: 'ฉัน/ผมเรียนวัน [วัน] ถึงวัน [วัน]',
+    answerTemplate: 'chǎn/phǒm rian wan [day] thʉ̌ŋ wan [day]',
+    answerPhonetic: 'chǎn/phǒm rian wan [day] thʉ̌ŋ wan [day]',
+    answerEnglish: 'I study from [day] to [day].',
+    category: 'education'
+  },
+  {
+    id: 'study-time',
+    questionThai: 'เรียนกี่โมง',
+    questionPhonetic: 'rian kìi mooŋ',
+    questionEnglish: 'What time do you study?',
+    answerThai: 'ฉัน/ผมเรียน [เวลา] โมงถึง [เวลา] โมง',
+    answerTemplate: 'chǎn/phǒm rian [time] mooŋ thʉ̌ŋ [time] mooŋ',
+    answerPhonetic: 'chǎn/phǒm rian [time] mooŋ thʉ̌ŋ [time] mooŋ',
+    answerEnglish: 'I study from [time] o\'clock to [time] o\'clock.',
+    category: 'education'
+  },
+  {
+    id: 'today-day',
+    questionThai: 'วันนี้วันอะไร',
+    questionPhonetic: 'wan níi wan àray',
+    questionEnglish: 'What day is today?',
+    answerThai: 'วันนี้วัน [ชื่อวัน]',
+    answerTemplate: 'wan níi wan [day]',
+    answerPhonetic: 'wan níi wan [day]',
+    answerEnglish: 'Today is [day].',
+    category: 'time'
+  },
+  {
+    id: 'today-date',
+    questionThai: 'วันนี้วันที่เท่าไหร่',
+    questionPhonetic: 'wan níi wan thîi thaw rày',
+    questionEnglish: 'What date is today?',
+    answerThai: 'วันนี้วันที่ [วันที่] [เดือน]',
+    answerTemplate: 'wan níi wan thîi [date] [month]',
+    answerPhonetic: 'wan níi wan thîi [date] [month]',
+    answerEnglish: 'Today is [date] [month].',
+    category: 'time'
+  },
+  {
+    id: 'days-week',
+    questionThai: 'บอกชื่อวันในสัปดาห์',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ wan nay sàpdaa',
+    questionEnglish: 'Give me the names of the days in a week.',
+    answerThai: 'วันจันทร์ วันอังคาร วันพุธ วันพฤหัสบดี วันศุกร์ วันเสาร์ วันอาทิตย์',
+    answerTemplate: 'wan can wan aŋkhaan wan phút wan pha rʉ́hàt sa bɔɔ dii wan sùk wan sǎw wan aathít',
+    answerPhonetic: 'wan can wan aŋkhaan wan phút wan pha rʉ́hàt sa bɔɔ dii wan sùk wan sǎw wan aathít',
+    answerEnglish: 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.',
+    category: 'time'
+  },
+  {
+    id: 'this-month',
+    questionThai: 'เดือนนี้เดือนอะไร',
+    questionPhonetic: 'dʉan níi dʉan àray',
+    questionEnglish: 'What month is this month?',
+    answerThai: 'เดือนนี้เดือน [ชื่อเดือน]',
+    answerTemplate: 'dʉan níi dʉan [month]',
+    answerPhonetic: 'dʉan níi dʉan [month]',
+    answerEnglish: 'This month is [month].',
+    category: 'time'
+  },
+  {
+    id: 'months-year',
+    questionThai: 'บอกชื่อเดือนในหนึ่งปี',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ dʉan nay nʉ̀ŋ pii',
+    questionEnglish: 'Give me the names of the months in a year.',
+    answerThai: 'มกราคม กุมภาพันธ์ มีนาคม เมษายน พฤษภาคม มิถุนายน กรกฎาคม สิงหาคม กันยายน ตุลาคม พฤศจิกายน ธันวาคม',
+    answerTemplate: 'ma ka raa khom kum phaa phan mii naa khom mee sǎa yon phrʉ́t sa phaa khom mí thù naa yon ka ra ka daa khom sǐŋ hǎa khom kan yaa yon tù laa khom phrʉ́t sa cì kaa yon than waa khom',
+    answerPhonetic: 'ma ka raa khom kum phaa phan mii naa khom mee sǎa yon phrʉ́t sa phaa khom mí thù naa yon ka ra ka daa khom sǐŋ hǎa khom kan yaa yon tù laa khom phrʉ́t sa cì kaa yon than waa khom',
+    answerEnglish: 'January, February, March, April, May, June, July, August, September, October, November, December.',
+    category: 'time'
+  },
+  {
+    id: 'this-year',
+    questionThai: 'ปีนี้ปีอะไร',
+    questionPhonetic: 'pii níi pii àray',
+    questionEnglish: 'What year is this year?',
+    answerThai: 'ปีนี้ปี [ปี]',
+    answerTemplate: 'pii níi pii [year]',
+    answerPhonetic: 'pii níi pii [year]',
+    answerEnglish: 'This year is [year].',
+    category: 'time'
+  },
+  {
+    id: 'current-time',
+    questionThai: 'ตอนนี้กี่โมง',
+    questionPhonetic: 'tɔɔn níi kìi mooŋ',
+    questionEnglish: 'What time is it now?',
+    answerThai: 'ตอนนี้ [เวลา] โมง [นาที] นาที',
+    answerTemplate: 'tɔɔnníi [time] mooŋ [minutes] naathii',
+    answerPhonetic: 'tɔɔnníi [time] mooŋ [minutes] naathii',
+    answerEnglish: 'It\'s now [time]:[minutes].',
+    category: 'time'
+  },
+  {
+    id: 'like-eat',
+    questionThai: 'ชอบกินอะไร',
+    questionPhonetic: 'chɔ̂ɔp kin àray',
+    questionEnglish: 'What do you like to eat?',
+    answerThai: 'ฉัน/ผมชอบกิน [อาหารไทย]',
+    answerTemplate: 'chǎn/phǒm chɔ̂ɔp kin [Thai food]',
+    answerPhonetic: 'chǎn/phǒm chɔ̂ɔp kin [Thai food]',
+    answerEnglish: 'I like to eat [Thai food].',
+    category: 'preferences'
+  },
+  {
+    id: 'like-drink',
+    questionThai: 'ชอบดื่มอะไร',
+    questionPhonetic: 'chɔ̂ɔp dʉ̀ʉm àray',
+    questionEnglish: 'What do you like to drink?',
+    answerThai: 'ฉัน/ผมชอบดื่ม [เครื่องดื่ม]',
+    answerTemplate: 'chǎn/phǒm chɔ̂ɔp dʉ̀ʉm [drink]',
+    answerPhonetic: 'chǎn/phǒm chɔ̂ɔp dʉ̀ʉm [drink]',
+    answerEnglish: 'I like to drink [drink].',
+    category: 'preferences'
+  },
+  {
+    id: 'like-fruit',
+    questionThai: 'ชอบกินผลไม้อะไร',
+    questionPhonetic: 'chɔ̂ɔp kin phǒnlamáy àray',
+    questionEnglish: 'What fruit do you like to eat?',
+    answerThai: 'ฉัน/ผมชอบกิน [ผลไม้]',
+    answerTemplate: 'chǎn/phǒm chɔ̂ɔp kin [fruit]',
+    answerPhonetic: 'chǎn/phǒm chɔ̂ɔp kin [fruit]',
+    answerEnglish: 'I like to eat [fruit].',
+    category: 'preferences'
+  },
+  {
+    id: 'thai-food-names',
+    questionThai: 'บอกชื่ออาหารไทยสิบอย่าง',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ aahǎan thay sìp yàaŋ',
+    questionEnglish: 'Give me 10 names of Thai food.',
+    answerThai: 'ผัดไทย ต้มยำกุ้ง แกงเขียวหวาน ส้มตำ มาม่า ข้าวผัด ผัดกะเพรา ลาบ ข้าวซอย หมูปิ้ง',
+    answerTemplate: 'phàt thay tômyam kûŋ kɛɛŋkhǐawwǎan sômtam maama khâawphàt phàt kàphraw laap khâaw sɔɔy mǔu pîŋ',
+    answerPhonetic: 'phàt thay tômyam kûŋ kɛɛŋkhǐawwǎan sômtam maama khâawphàt phàt kàphraw laap khâaw sɔɔy mǔu pîŋ',
+    answerEnglish: 'Pad Thai, Tom Yam Kung, Green Curry, Som Tam, Instant Noodles, Fried Rice, Pad Kra Pao, Laab, Khao Soi, Grilled Pork.',
+    category: 'vocabulary'
+  },
+  {
+    id: 'fruit-names',
+    questionThai: 'บอกชื่อผลไม้สิบอย่าง',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ phǒnlamáy sìp yàaŋ',
+    questionEnglish: 'Give me 10 names of fruits.',
+    answerThai: 'มะม่วง กล้วย ส้ม แอปเปิ้ล องุ่น สับปะรด มะละกอ ทุเรียน มังคุด ลิ้นจี่',
+    answerTemplate: 'mamûaŋ klûay sôm ɛɛppə̂n aŋùn sàppàròt malakɔɔ thurian maŋkhút lînchîi',
+    answerPhonetic: 'mamûaŋ klûay sôm ɛɛppə̂n aŋùn sàppàròt malakɔɔ thurian maŋkhút lînchîi',
+    answerEnglish: 'Mango, Banana, Orange, Apple, Grape, Pineapple, Papaya, Durian, Mangosteen, Lychee.',
+    category: 'vocabulary'
+  },
+  {
+    id: 'drink-names',
+    questionThai: 'บอกชื่อเครื่องดื่มสิบอย่าง',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ khrʉ̂aŋdʉ̀ʉm sìp yàaŋ',
+    questionEnglish: 'Give me 10 names of drinks.',
+    answerThai: 'น้ำ ชา กาแฟ น้ำส้ม โค้ก เบียร์ น้ำผลไม้ นม ชาเขียว ชาไทย',
+    answerTemplate: 'náam chaa kaafɛɛ náam sôm khôok bia náam phǒnlamáy nom chaa khǐaw chaa thay',
+    answerPhonetic: 'náam chaa kaafɛɛ náam sôm khôok bia náam phǒnlamáy nom chaa khǐaw chaa thay',
+    answerEnglish: 'Water, Tea, Coffee, Orange Juice, Coke, Beer, Fruit Juice, Milk, Green Tea, Thai Tea.',
+    category: 'vocabulary'
+  },
+  {
+    id: 'animal-names',
+    questionThai: 'บอกชื่อสัตว์สิบอย่าง',
+    questionPhonetic: 'bɔ̀ɔk chʉ̂ʉ sàt sìp yàaŋ',
+    questionEnglish: 'Give me 10 names of animals.',
+    answerThai: 'หมา แมว ช้าง หมู วัว ไก่ เป็ด ปลา นก ลิง',
+    answerTemplate: 'mǎa mɛɛw cháaŋ mǔu wua kày pèt plaa nók liŋ',
+    answerPhonetic: 'mǎa mɛɛw cháaŋ mǔu wua kày pèt plaa nók liŋ',
+    answerEnglish: 'Dog, Cat, Elephant, Pig, Cow, Chicken, Duck, Fish, Bird, Monkey.',
+    category: 'vocabulary'
+  },
+  {
+    id: 'where-here',
+    questionThai: 'ที่นี่ที่ไหน',
+    questionPhonetic: 'thîi nîi thîi nǎy',
+    questionEnglish: 'Where is this place?',
+    answerThai: 'ที่นี่ [ชื่อสถานที่]',
+    answerTemplate: 'thîi nîi [location]',
+    answerPhonetic: 'thîi nîi [location]',
+    answerEnglish: 'Here is [location].',
+    category: 'location'
+  },
+  {
+    id: 'school-name',
+    questionThai: 'โรงเรียนชื่ออะไร',
+    questionPhonetic: 'rooŋ rian chʉ̂ʉ àray',
+    questionEnglish: 'What is the name of your school?',
+    answerThai: 'โรงเรียนจุฬปราการภาษา',
+    answerTemplate: 'rooŋrian cùtpràkaay phaasǎa',
+    answerPhonetic: 'rooŋrian cùtpràkaay phaasǎa',
+    answerEnglish: 'It\'s Inspiration Language School.',
+    category: 'education'
+  },
+  {
+    id: 'school-location',
+    questionThai: 'โรงเรียนอยู่ที่ไหน',
+    questionPhonetic: 'rooŋrian yùu thîi nǎy',
+    questionEnglish: 'Where is your school located?',
+    answerThai: 'โรงเรียนอยู่ที่แม่เหียะ',
+    answerTemplate: 'rooŋrian yùu thîi Maehia',
+    answerPhonetic: 'rooŋrian yùu thîi Maehia',
+    answerEnglish: 'The school is located at Maehia.',
+    category: 'education'
+  },
+  {
+    id: 'study-where',
+    questionThai: 'เรียนที่ไหน',
+    questionPhonetic: 'rian thîi nǎy',
+    questionEnglish: 'Where do you study?',
+    answerThai: 'เรียนที่แม่เหียะ',
+    answerTemplate: 'rian thîi Maehia',
+    answerPhonetic: 'rian thîi Maehia',
+    answerEnglish: 'I study at Maehia.',
+    category: 'education'
+  },
+  {
+    id: 'count-numbers',
+    questionThai: 'นับเลข',
+    questionPhonetic: 'náp leek',
+    questionEnglish: 'Count numbers for me.',
+    answerThai: 'หนึ่ง สอง สาม สี่ ห้า หก เจ็ด แปด เก้า สิบ...',
+    answerTemplate: 'nʉ̀ŋ sɔ̌ɔŋ sǎam sìi hâa hòk cèt pɛ̀ɛt kâaw sìp...',
+    answerPhonetic: 'nʉ̀ŋ sɔ̌ɔŋ sǎam sìi hâa hòk cèt pɛ̀ɛt kâaw sìp...',
+    answerEnglish: 'One, two, three, four, five, six, seven, eight, nine, ten...',
+    category: 'numbers'
+  },
+  {
+    id: 'how-much-this',
+    questionThai: 'อันนี้เท่าไหร่',
+    questionPhonetic: 'anníi thaw rày',
+    questionEnglish: 'How much is this?',
+    answerThai: '[ตัวเลขที่แสดง]',
+    answerTemplate: '[number shown]',
+    answerPhonetic: '[number shown]',
+    answerEnglish: 'Give the Thai words for the number shown.',
+    category: 'numbers'
+  },
+  {
+    id: 'what-color',
+    questionThai: 'อันนี้สีอะไร',
+    questionPhonetic: 'an níi sǐi àray',
+    questionEnglish: 'What color is this?',
+    answerThai: 'อันนี้สี [สี]',
+    answerTemplate: 'an níi sǐi [color]',
+    answerPhonetic: 'an níi sǐi [color]',
+    answerEnglish: 'This is [color].',
+    category: 'colors'
+  },
+  {
+    id: 'pen-colors',
+    questionThai: 'บอกสีทั้งหมดของปากกานี้',
+    questionPhonetic: 'bɔ̀ɔk sǐi tháŋmòt khɔ̌ɔŋ pàakkaa níi',
+    questionEnglish: 'Tell me all the colors of this pen.',
+    answerThai: '[บอกสีทั้งหมดของปากกา]',
+    answerTemplate: '[all colors of the pen]',
+    answerPhonetic: '[all colors of the pen]',
+    answerEnglish: 'Giving all the colors of the pen.',
+    category: 'colors'
+  },
+  {
+    id: 'what-is-this',
+    questionThai: 'อันนี้คืออะไร',
+    questionPhonetic: 'anníi khʉʉ àray',
+    questionEnglish: 'What is this?',
+    answerThai: 'อันนี้คือ [ชื่อสิ่งของ/สัตว์/ยานพาหนะ/ผลไม้]',
+    answerTemplate: 'anníi khʉʉ [object/animal/vehicle/fruit]',
+    answerPhonetic: 'anníi khʉʉ [object/animal/vehicle/fruit]',
+    answerEnglish: 'This is [object/animal/vehicle/fruit].',
+    category: 'identification'
+  },
+  {
+    id: 'house-where',
+    questionThai: 'บ้านอยู่ที่ไหน',
+    questionPhonetic: 'bâan yùu thîi nǎy',
+    questionEnglish: 'Where is your house?',
+    answerThai: 'บ้านอยู่ที่ [ที่พัก]',
+    answerTemplate: 'bâan yùu thîi [accommodation]',
+    answerPhonetic: 'bâan yùu thîi [accommodation]',
+    answerEnglish: 'My house is at [accommodation].',
+    category: 'location'
+  },
+  {
+    id: 'stay-where',
+    questionThai: 'พักอยู่ที่ไหน',
+    questionPhonetic: 'phák yùu thîi nǎy',
+    questionEnglish: 'Where are you staying?',
+    answerThai: 'พักอยู่ [ที่พัก]',
+    answerTemplate: 'phák yùu [accommodation]',
+    answerPhonetic: 'phák yùu [accommodation]',
+    answerEnglish: 'I am staying at [accommodation].',
+    category: 'location'
+  },
+  {
+    id: 'stay-with-who',
+    questionThai: 'พักอยู่กับใคร',
+    questionPhonetic: 'phák yùu kàp khray',
+    questionEnglish: 'Who do you stay with?',
+    answerThai: 'พักอยู่กับเพื่อน / พ่อแม่ / พี่น้อง / ครอบครัว / แฟน / คนเดียว',
+    answerTemplate: 'phák yùu kàp phʉ̂an / phɔ̂ɔ mɛ̂ɛ / phîi nɔ́ɔŋ / khrɔ̂ɔp khrua / fan / khon diaw',
+    answerPhonetic: 'phák yùu kàp phʉ̂an / phɔ̂ɔ mɛ̂ɛ / phîi nɔ́ɔŋ / khrɔ̂ɔp khrua / fan / khon diaw',
+    answerEnglish: 'I stay with my friend / parents / siblings / family / boyfriend/girlfriend / alone.',
+    category: 'personal',
+    extension: 'first'
+  },
+
+  // Second Extension Questions (39-59)
+  {
+    id: 'birth-date',
+    questionThai: 'เกิดวันที่เท่าไหร่',
+    questionPhonetic: 'kə̀ət wanthîi thâwrày',
+    questionEnglish: 'What date were you born?',
+    answerThai: 'เกิดวันที่ [วันที่] [เดือน] [ปี]',
+    answerTemplate: 'kə̀ət wanthîi [date] [month] [year]',
+    answerPhonetic: 'kə̀ət wanthîi [date] [month] [year]',
+    answerEnglish: 'I was born on [date] [month] [year].',
+    category: 'personal'
+  },
+  {
+    id: 'birth-day',
+    questionThai: 'เกิดวันอะไร',
+    questionPhonetic: 'kə̀ət wan àray',
+    questionEnglish: 'What day were you born?',
+    answerThai: 'เกิดวัน [วัน]',
+    answerTemplate: 'kə̀ət wan [day]',
+    answerPhonetic: 'kə̀ət wan [day]',
+    answerEnglish: 'I was born on [day].',
+    category: 'personal'
+  },
+  {
+    id: 'birth-year',
+    questionThai: 'เกิดปีอะไร',
+    questionPhonetic: 'kə̀ət pii àray',
+    questionEnglish: 'What year were you born?',
+    answerThai: 'เกิดปี [ปี]',
+    answerTemplate: 'kə̀ət pii [year]',
+    answerPhonetic: 'kə̀ət pii [year]',
+    answerEnglish: 'I was born in [year].',
+    category: 'personal'
+  },
+  {
+    id: 'come-with-who',
+    questionThai: 'มากับใคร',
+    questionPhonetic: 'maa kàp kray',
+    questionEnglish: 'Who did you come with?',
+    answerThai: 'ฉัน/ผมมาคนเดียว / มากับเจ้าหน้าที่โรงเรียน',
+    answerTemplate: 'chǎn/phǒm maa khon diaw / maa kàp câwnâathîi rooŋrian',
+    answerPhonetic: 'chǎn/phǒm maa khon diaw / maa kàp câwnâathîi rooŋrian',
+    answerEnglish: 'I came alone / I came with the school officer.',
+    category: 'visit'
+  },
+  {
+    id: 'officer-name',
+    questionThai: 'เจ้าหน้าที่โรงเรียนชื่ออะไร',
+    questionPhonetic: 'câwnâathîi rooŋrian chʉ̂ʉ àray',
+    questionEnglish: 'What is the name of the school officer?',
+    answerThai: 'เจ้าหน้าที่โรงเรียนชื่อ [ชื่อ]',
+    answerTemplate: 'câwnâathîi rooŋrian chʉ̂ʉ [name]',
+    answerPhonetic: 'câwnâathîi rooŋrian chʉ̂ʉ [name]',
+    answerEnglish: 'The school officer\'s name is [name].',
+    category: 'visit'
+  },
+  {
+    id: 'arrival-time',
+    questionThai: 'มากี่โมง',
+    questionPhonetic: 'maa kìi mooŋ',
+    questionEnglish: 'What time did you come here?',
+    answerThai: 'ฉัน/ผมมา [เวลา] โมง',
+    answerTemplate: 'chǎn/phǒm maa [time] mooŋ',
+    answerPhonetic: 'chǎn/phǒm maa [time] mooŋ',
+    answerEnglish: 'I came here at [time] o\'clock.',
+    category: 'visit'
+  },
+  {
+    id: 'purpose-visit',
+    questionThai: 'มาทำอะไร',
+    questionPhonetic: 'maa tham àray',
+    questionEnglish: 'What are you coming for?',
+    answerThai: 'ฉัน/ผมมาต่อวีซ่า',
+    answerTemplate: 'chǎn/phǒm maa tɔ̀ɔ wiisâa',
+    answerPhonetic: 'chǎn/phǒm maa tɔ̀ɔ wiisâa',
+    answerEnglish: 'I came here to extend my visa.',
+    category: 'purpose'
+  },
+  {
+    id: 'how-came',
+    questionThai: 'มายังไง',
+    questionPhonetic: 'maa yaŋ ŋay',
+    questionEnglish: 'How did you come here?',
+    answerThai: 'ฉัน/ผมขับรถมา / นั่งรถมา',
+    answerTemplate: 'chǎn/phǒm khàp rót maa / nâŋ rót maa',
+    answerPhonetic: 'chǎn/phǒm khàp rót maa / nâŋ rót maa',
+    answerEnglish: 'I drove a car to come here / I took a ride to come here.',
+    category: 'transportation'
+  },
+  {
+    id: 'how-return',
+    questionThai: 'กลับยังไง',
+    questionPhonetic: 'klàp yaŋ ŋay',
+    questionEnglish: 'How will you go back?',
+    answerThai: 'ฉัน/ผมจะขับรถกลับ / จะนั่งรถกลับ',
+    answerTemplate: 'chǎn/phǒm cà khàp rót klàp / cà nâŋ rót klàp',
+    answerPhonetic: 'chǎn/phǒm cà khàp rót klàp / cà nâŋ rót klàp',
+    answerEnglish: 'I will drive my car back home / I will take a ride back home.',
+    category: 'transportation'
+  },
+  {
+    id: 'where-next',
+    questionThai: 'ไปไหนต่อ',
+    questionPhonetic: 'pay nǎy tɔ̀ɔ',
+    questionEnglish: 'Where will you go after this?',
+    answerThai: 'ฉัน/ผมจะกลับบ้าน',
+    answerTemplate: 'chǎn/phǒm cà klàp bâan',
+    answerPhonetic: 'chǎn/phǒm cà klàp bâan',
+    answerEnglish: 'I will go back home.',
+    category: 'plans'
+  },
+  {
+    id: 'eaten-yet',
+    questionThai: 'คุณกินข้าวรึยัง',
+    questionPhonetic: 'khun kin khâaw rʉ̌ʉ yaŋ',
+    questionEnglish: 'Have you eaten yet?',
+    answerThai: 'ฉัน/ผมกินข้าวแล้ว / ยังไม่ได้กิน',
+    answerTemplate: 'chǎn/phǒm kin khâaw lɛ́ɛw / yaŋ mâydây kin',
+    answerPhonetic: 'chǎn/phǒm kin khâaw lɛ́ɛw / yaŋ mâydây kin',
+    answerEnglish: 'I have eaten already / I haven\'t eaten yet.',
+    category: 'food'
+  },
+  {
+    id: 'why-not-eaten',
+    questionThai: 'ทำไมยังไม่ได้กิน',
+    questionPhonetic: 'tham may yaŋ mâydây kin',
+    questionEnglish: 'Why haven\'t you eaten yet?',
+    answerThai: 'เพราะ [เหตุผล]',
+    answerTemplate: 'phrɔ́ [reason]',
+    answerPhonetic: 'phrɔ́ [reason]',
+    answerEnglish: 'Because [reason].',
+    category: 'food'
+  },
+  {
+    id: 'what-ate',
+    questionThai: 'คุณกินอะไร',
+    questionPhonetic: 'khun kin àray',
+    questionEnglish: 'What did you eat?',
+    answerThai: 'ฉัน/ผมกิน [อาหาร]',
+    answerTemplate: 'chǎn/phǒm kin [food]',
+    answerPhonetic: 'chǎn/phǒm kin [food]',
+    answerEnglish: 'I ate [food].',
+    category: 'food'
+  },
+  {
+    id: 'restaurant-name',
+    questionThai: 'ร้านอาหารชื่ออะไร',
+    questionPhonetic: 'ráan aahǎan chʉ̂ʉ àray',
+    questionEnglish: 'What is the name of the restaurant?',
+    answerThai: 'ร้านอาหารชื่อ [ชื่อร้าน]',
+    answerTemplate: 'ráan aahǎan chʉ̂ʉ [restaurant name]',
+    answerPhonetic: 'ráan aahǎan chʉ̂ʉ [restaurant name]',
+    answerEnglish: 'The restaurant named [restaurant name].',
+    category: 'food'
+  },
+  {
+    id: 'restaurant-location',
+    questionThai: 'ร้านอาหารอยู่ที่ไหน',
+    questionPhonetic: 'ráan aahǎan yùu thîi nǎy',
+    questionEnglish: 'Where is the restaurant?',
+    answerThai: 'ร้านอาหารอยู่ที่ [สถานที่]',
+    answerTemplate: 'ráan aahǎan yùu thîi [location]',
+    answerPhonetic: 'ráan aahǎan yùu thîi [location]',
+    answerEnglish: 'The restaurant is located at [location].',
+    category: 'food'
+  },
+  {
+    id: 'where-ate',
+    questionThai: 'กินที่ไหน',
+    questionPhonetic: 'kin thîi nǎy',
+    questionEnglish: 'Where did you eat?',
+    answerThai: 'กินที่ [สถานที่]',
+    answerTemplate: 'kin thîi [location]',
+    answerPhonetic: 'kin thîi [location]',
+    answerEnglish: 'I ate at [location].',
+    category: 'food'
+  },
+  {
+    id: 'been-hospital',
+    questionThai: 'คุณเคยไปโรงพยาบาลไหม',
+    questionPhonetic: 'khun khəəy pay rooŋphayaabaan mǎy',
+    questionEnglish: 'Have you ever been to a hospital?',
+    answerThai: 'ฉัน/ผมเคยไป / ไม่เคยไป',
+    answerTemplate: 'chǎn/phǒm khəəy pay / mâykhəəy pay',
+    answerPhonetic: 'chǎn/phǒm khəəy pay / mâykhəəy pay',
+    answerEnglish: 'I have been there / I have never been there.',
+    category: 'health'
+  },
+  {
+    id: 'hospital-purpose',
+    questionThai: 'ไปทำอะไร',
+    questionPhonetic: 'pay tham àray',
+    questionEnglish: 'What do you go there for?',
+    answerThai: 'ไป [วัตถุประสงค์]',
+    answerTemplate: 'pay [purpose: hǎa mɔ̌ɔ/sùat mon/thîaw/rian]',
+    answerPhonetic: 'pay [purpose: see doctor/pray/travel/study]',
+    answerEnglish: 'I go there for [purpose].',
+    category: 'activities'
+  },
+  {
+    id: 'like-activities',
+    questionThai: 'ชอบทำอะไร',
+    questionPhonetic: 'chɔ̂ɔp tham àray',
+    questionEnglish: 'What do you like to do?',
+    answerThai: 'ฉัน/ผมชอบ [กิจกรรม]',
+    answerTemplate: 'chǎn/phǒm chɔ̂ɔp [activity]',
+    answerPhonetic: 'chǎn/phǒm chɔ̂ɔp [faŋ phleeŋ/khàp rót/àan naŋsʉ̌ʉ/lên keem/duu nǎŋ]',
+    answerEnglish: 'I like to [listen to music/drive cars/read books/play games/watch movies].',
+    category: 'hobbies'
+  },
+  {
+    id: 'why-like-activity',
+    questionThai: 'ทำไมชอบ [กิจกรรม]',
+    questionPhonetic: 'thammay chɔ̂ɔp [activity]',
+    questionEnglish: 'Why do you like to [activity]?',
+    answerThai: 'เพราะ [เหตุผล]',
+    answerTemplate: 'phrɔ́ [sanùk/phɔ̀nkhlaay]',
+    answerPhonetic: 'phrɔ́ [fun/relax]',
+    answerEnglish: 'Because it\'s [fun/relaxing].',
+    category: 'hobbies'
+  },
+  {
+    id: 'play-with-who',
+    questionThai: 'เล่นกับใคร',
+    questionPhonetic: 'lên kàp khray',
+    questionEnglish: 'Who do you play with?',
+    answerThai: 'เล่นกับ [คน]',
+    answerTemplate: 'lên kàp [phʉ̂an/phîi nɔ́ɔŋ/fan/phɔ̂ɔ mɛ̂ɛ]',
+    answerPhonetic: 'lên kàp [friend/siblings/boyfriend-girlfriend/parents]',
+    answerEnglish: 'I play with [friend/siblings/boyfriend-girlfriend/parents].',
+    category: 'hobbies'
+  },
+
+  // Third Extension Questions (60-68)
+  {
+    id: 'fathers-day',
+    questionThai: 'วันพ่อวันที่เท่าไหร่',
+    questionPhonetic: 'wan phɔ̂ɔ wan thîi thâwrày',
+    questionEnglish: 'What is the date of Father\'s Day?',
+    answerThai: 'วันที่ห้า ธันวาคม',
+    answerTemplate: 'wan thîi hâa than waa khom',
+    answerPhonetic: 'wan thîi hâa than waa khom',
+    answerEnglish: 'It\'s December 5th.',
+    category: 'culture'
+  },
+  {
+    id: 'mothers-day',
+    questionThai: 'วันแม่วันที่เท่าไหร่',
+    questionPhonetic: 'wan mɛ̂ɛ wan thîi thâwrày',
+    questionEnglish: 'What is the date of Mother\'s Day?',
+    answerThai: 'วันที่สิบสอง สิงหาคม',
+    answerTemplate: 'wan thîi sìp sɔ̌ɔŋ sǐŋ hǎa khom',
+    answerPhonetic: 'wan thîi sìp sɔ̌ɔŋ sǐŋ hǎa khom',
+    answerEnglish: 'It\'s August 12th.',
+    category: 'culture'
+  },
+  {
+    id: 'doi-suthep',
+    questionThai: 'รู้อะไรเกี่ยวกับดอยสุเทพบ้าง',
+    questionPhonetic: 'rúu àray kìawkàp Doi Suthep bâaŋ',
+    questionEnglish: 'What do you know about Doi Suthep?',
+    answerThai: 'ดอยสุเทพเป็นภูเขาทางทิศตะวันตกของเชียงใหม่ ประเทศไทย สูง 1,676 เมตร และเป็นหนึ่งในยอดเขาคู่ของภูเขาแกรนิต',
+    answerTemplate: 'Doi Suthep pen phuukhǎaw thaang thít tàwantòk khɔ̌ɔŋ Chiang Mai pràthêet thay sǔuŋ 1,676 meet lɛ́ pen nʉ̀ŋ nay yɔ̂ɔt khǎaw khûu khɔ̌ɔŋ phuukhǎaw granite',
+    answerPhonetic: 'Doi Suthep pen phuukhǎaw thaang thít tàwantòk khɔ̌ɔŋ Chiang Mai pràthêet thay sǔuŋ 1,676 meet lɛ́ pen nʉ̀ŋ nay yɔ̂ɔt khǎaw khûu khɔ̌ɔŋ phuukhǎaw granite',
+    answerEnglish: 'Doi Suthep, is a mountain west of Chiang Mai, Thailand. It is 1,676 metres in elevation and is one of the twin peaks of a granite mountain.',
+    category: 'culture'
+  },
+  {
+    id: 'parents-location',
+    questionThai: 'พ่อแม่อยู่ที่ไหน',
+    questionPhonetic: 'phɔ̂ɔ mɛ̂ɛ yùu thîi nǎy',
+    questionEnglish: 'Where are your parents?',
+    answerThai: 'พ่อแม่อยู่ที่ [ประเทศ]',
+    answerTemplate: 'phɔ̂ɔ mɛ̂ɛ yùu thîi [country]',
+    answerPhonetic: 'phɔ̂ɔ mɛ̂ɛ yùu thîi [country]',
+    answerEnglish: 'My parents stay in [country].',
+    category: 'family',
+    extension: 'third'
+  },
+  {
+    id: 'have-siblings',
+    questionThai: 'มีพี่น้องไหม',
+    questionPhonetic: 'mii phîi nɔ́ɔŋ mǎy',
+    questionEnglish: 'Do you have siblings?',
+    answerThai: 'มี / ไม่มี',
+    answerTemplate: 'mii / mây mii',
+    answerPhonetic: 'mii / mây mii',
+    answerEnglish: 'Yes, I have / No, I don\'t have.',
+    category: 'family',
+    extension: 'third'
+  },
+  {
+    id: 'siblings-location',
+    questionThai: 'พี่น้องอยู่ที่ไหน',
+    questionPhonetic: 'phîi nɔ́ɔŋ yùu thîi nǎy',
+    questionEnglish: 'Where are your siblings?',
+    answerThai: 'พี่น้องอยู่ที่ [ประเทศ]',
+    answerTemplate: 'phîi nɔ́ɔŋ yùu thîi [country]',
+    answerPhonetic: 'phîi nɔ́ɔŋ yùu thîi [country]',
+    answerEnglish: 'My siblings stay in [country].',
+    category: 'family',
+    extension: 'third'
+  },
+  {
+    id: 'older-younger',
+    questionThai: 'มีพี่รึน้อง',
+    questionPhonetic: 'mii phîi rʉ̌ʉ nɔ́ɔŋ',
+    questionEnglish: 'You have an older sibling or a younger one?',
+    answerThai: 'มีพี่ / มีน้อง',
+    answerTemplate: 'mii phîi / mii nɔ́ɔŋ',
+    answerPhonetic: 'mii phîi / mii nɔ́ɔŋ',
+    answerEnglish: 'I have an older sibling / I have a younger sibling.',
+    category: 'family',
+    extension: 'third'
+  },
+  {
+    id: 'brother-sister-older',
+    questionThai: 'มีพี่ชายรึพี่สาว',
+    questionPhonetic: 'mii phîi chaay rʉ̌ʉ phîi sǎaw',
+    questionEnglish: 'You have an older brother or an older sister?',
+    answerThai: 'มีพี่ชาย / มีพี่สาว',
+    answerTemplate: 'mii phîi chaay / mii phîi sǎaw',
+    answerPhonetic: 'mii phîi chaay / mii phîi sǎaw',
+    answerEnglish: 'I have an older brother / I have an older sister.',
+    category: 'family',
+    extension: 'third'
+  },
+  {
+    id: 'brother-sister-younger',
+    questionThai: 'มีน้องชายรึน้องสาว',
+    questionPhonetic: 'mii nɔ́ɔŋ chaay rʉ̌ʉ nɔ́ɔŋ sǎaw',
+    questionEnglish: 'You have a younger brother or a younger sister?',
+    answerThai: 'มีน้องชาย / มีน้องสาว',
+    answerTemplate: 'mii nɔ́ɔŋ chaay / mii nɔ́ɔŋ sǎaw',
+    answerPhonetic: 'mii nɔ́ɔŋ chaay / mii nɔ́ɔŋ sǎaw',
+    answerEnglish: 'I have a younger brother / I have a younger sister.',
+    category: 'family',
+    extension: 'third'
+  }
+];
+
+export const additionalVocabulary = [
+  {
+    thai: 'จ่ายเงิน',
+    phonetic: 'càay ŋən',
+    english: 'pay money'
+  },
+  {
+    thai: 'เอาเงินมา',
+    phonetic: 'aw ŋən maa',
+    english: 'bring the money'
+  },
+  {
+    thai: 'เอาหนึ่งพันเก้าร้อยบาท',
+    phonetic: 'aw nʉ̀ŋ phan kâaw rɔ́ɔy bàat',
+    english: 'bring 1,900 baht'
+  },
+  {
+    thai: 'ได้ไหม',
+    phonetic: 'dâay mǎy',
+    english: 'Can you'
+  },
+  {
+    thai: 'พูดดังดัง',
+    phonetic: 'phûut daŋ daŋ',
+    english: 'speak louder'
+  },
+  {
+    thai: 'พูดช้าช้า',
+    phonetic: 'phûut cháa cháa',
+    english: 'speak slower'
+  },
+  {
+    thai: 'พูดอีกครั้ง',
+    phonetic: 'phûut ìik khrán',
+    english: 'speak again'
+  },
+  {
+    thai: 'พูดดังดังได้ไหม',
+    phonetic: 'phûut daŋ daŋ dâay mǎy',
+    english: 'Can you speak louder?'
+  },
+  {
+    thai: 'พูดช้าช้าได้ไหม',
+    phonetic: 'phûut cháa cháa dâay mǎy',
+    english: 'Can you speak slower?'
+  },
+  {
+    thai: 'พูดอีกครั้งได้ไหม',
+    phonetic: 'phûut ìik khrán dâay mǎy',
+    english: 'Can you repeat that?'
+  }
+];
