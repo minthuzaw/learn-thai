@@ -86,7 +86,7 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Thai Language Interview Practice</h1>
           <p className="text-gray-600 text-lg">
-            Practice common questions asked during Thai immigration interviews
+            Practice common questions asked during Thai Language interviews
           </p>
         </div>
 
