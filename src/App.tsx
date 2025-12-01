@@ -107,7 +107,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50">
+    <div className="min-h-screen from-slate-50 via-blue-50 to-indigo-100">
       <Header pronoun={pronoun} onPronounChange={setPronoun} />
       
       <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
