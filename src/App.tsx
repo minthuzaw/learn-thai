@@ -97,77 +97,77 @@ function App() {
       
       <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-start lg:justify-center space-x-4 lg:space-x-8 py-4 overflow-x-auto scrollbar-hide">
+          <div className="flex justify-center space-x-8 py-4">
             <button
               onClick={() => setCurrentView('topics')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'topics'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <BookOpen size={18} />
-              <span className="font-medium text-sm lg:text-base">Study Topics</span>
+              <span className="font-medium">Study Topics</span>
             </button>
             
             <button
               onClick={() => setCurrentView('quiz')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'quiz'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <Trophy size={18} />
-              <span className="font-medium text-sm lg:text-base">Practice Quiz</span>
+              <span className="font-medium">Practice Quiz</span>
             </button>
             
             <button
               onClick={() => setCurrentView('immigration')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'immigration'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <MessageCircle size={18} />
-              <span className="font-medium text-sm lg:text-base">Practice Q&A</span>
+              <span className="font-medium">Parctice Q&A</span>
             </button>
             
             <button
               onClick={() => setCurrentView('interview-questions')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'interview-questions'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <BookOpen size={18} />
-              <span className="font-medium text-sm lg:text-base">Interview Questions</span>
+              <span className="font-medium">Interview Questions</span>
             </button>
             
             <button
               onClick={() => setCurrentView('sample-vocabulary')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'sample-vocabulary'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <BookOpen size={18} />
-              <span className="font-medium text-sm lg:text-base">Sample Vocabulary</span>
+              <span className="font-medium">Sample Vocabulary</span>
             </button>
             
             <button
               onClick={() => setCurrentView('final-questions')}
-              className={`flex items-center space-x-2 px-3 lg:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                 currentView === 'final-questions'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <Trophy size={18} />
-              <span className="font-medium text-sm lg:text-base">Final Questions</span>
+              <span className="font-medium">Final Questions</span>
             </button>
           </div>
         </div>
