@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ pronoun, onPronounChange }) => {
   return (
-    <header className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 text-white shadow-xl">
+    <header className="bg-gradient-to-r from-rose-500 via-pink-600 to-purple-600 text-white shadow-xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-end mb-4">
           <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
