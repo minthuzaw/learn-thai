@@ -7,11 +7,12 @@ import PracticeQuiz from './components/PracticeQuiz';
 import ImmigrationPractice from './components/ImmigrationPractice';
 import InterviewQuestions from './components/InterviewQuestions';
 import SampleVocabulary from './components/SampleVocabulary';
+import FinalQuestions from './components/FinalQuestions';
 import { Topic } from './types';
 import { topics } from './data/topics';
 
 function App() {
-  const [currentView, setCurrentView] = useState<'topics' | 'topic-detail' | 'quiz' | 'immigration' | 'interview-questions' | 'sample-vocabulary'>('topics');
+  const [currentView, setCurrentView] = useState<'topics' | 'topic-detail' | 'quiz' | 'immigration' | 'interview-questions' | 'sample-vocabulary' | 'final-questions'>('topics');
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [completedTopics, setCompletedTopics] = useState<string[]>([]);
   const [pronoun, setPronoun] = useState<'chǎn' | 'phǒm'>('chǎn');
@@ -68,6 +69,13 @@ function App() {
       case 'sample-vocabulary':
         return (
           <SampleVocabulary
+            onBack={() => setCurrentView('topics')}
+            pronoun={pronoun}
+          />
+        );
+      case 'final-questions':
+        return (
+          <FinalQuestions
             onBack={() => setCurrentView('topics')}
             pronoun={pronoun}
           />
@@ -148,6 +156,18 @@ function App() {
             >
               <BookOpen size={18} />
               <span className="font-medium">Sample Vocabulary</span>
+            </button>
+            
+            <button
+              onClick={() => setCurrentView('final-questions')}
+              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
+                currentView === 'final-questions'
+                  ? 'bg-blue-600 text-white shadow-md'
+                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+              }`}
+            >
+              <Trophy size={18} />
+              <span className="font-medium">Final Questions</span>
             </button>
           </div>
         </div>
