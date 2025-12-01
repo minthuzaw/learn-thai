@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BookOpen, MessageCircle, Trophy, Volume2 } from 'lucide-react';
+import { BookOpen, MessageCircle, Trophy, Volume2, Menu, X } from 'lucide-react';
 import Header from './components/Header';
 import TopicList from './components/TopicList';
 import TopicDetail from './components/TopicDetail';
@@ -16,6 +16,16 @@ function App() {
   const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null);
   const [completedTopics, setCompletedTopics] = useState<string[]>([]);
   const [pronoun, setPronoun] = useState<'chǎn' | 'phǒm'>('chǎn');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const navItems = [
+    { id: 'topics', label: 'Study Topics', icon: BookOpen },
+    { id: 'quiz', label: 'Practice Quiz', icon: Trophy },
+    { id: 'immigration', label: 'Practice Q&A', icon: MessageCircle },
+    { id: 'interview-questions', label: 'Interview Questions', icon: BookOpen },
+    { id: 'sample-vocabulary', label: 'Sample Vocabulary', icon: BookOpen },
+    { id: 'final-questions', label: 'Final Questions', icon: Trophy },
+  ];
 
   const handleTopicSelect = (topic: Topic) => {
     setSelectedTopic(topic);
@@ -31,6 +41,11 @@ function App() {
   const handleBackToTopics = () => {
     setCurrentView('topics');
     setSelectedTopic(null);
+  };
+
+  const handleNavClick = (viewId: any) => {
+    setCurrentView(viewId);
+    setMobileMenuOpen(false);
   };
 
   const renderCurrentView = () => {
@@ -97,79 +112,57 @@ function App() {
       
       <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center space-x-8 py-4">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex justify-center flex-wrap gap-2 xl:gap-4 py-4">
+            {navItems.map(({ id, label, icon: Icon }) => (
+              <button
+                key={id}
+                onClick={() => handleNavClick(id)}
+                className={`flex items-center space-x-2 px-3 xl:px-4 py-2 rounded-lg transition-all duration-200 whitespace-nowrap ${
+                  currentView === id
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+                }`}
+              >
+                <Icon size={18} />
+                <span className="font-medium text-sm xl:text-base">{label}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Mobile Navigation Header */}
+          <div className="lg:hidden flex items-center justify-between py-4">
+            <span className="text-gray-800 font-semibold text-base">
+              {navItems.find(item => item.id === currentView)?.label}
+            </span>
             <button
-              onClick={() => setCurrentView('topics')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'topics'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Toggle menu"
             >
-              <BookOpen size={18} />
-              <span className="font-medium">Study Topics</span>
-            </button>
-            
-            <button
-              onClick={() => setCurrentView('quiz')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'quiz'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              <Trophy size={18} />
-              <span className="font-medium">Practice Quiz</span>
-            </button>
-            
-            <button
-              onClick={() => setCurrentView('immigration')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'immigration'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              <MessageCircle size={18} />
-              <span className="font-medium">Parctice Q&A</span>
-            </button>
-            
-            <button
-              onClick={() => setCurrentView('interview-questions')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'interview-questions'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              <BookOpen size={18} />
-              <span className="font-medium">Interview Questions</span>
-            </button>
-            
-            <button
-              onClick={() => setCurrentView('sample-vocabulary')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'sample-vocabulary'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              <BookOpen size={18} />
-              <span className="font-medium">Sample Vocabulary</span>
-            </button>
-            
-            <button
-              onClick={() => setCurrentView('final-questions')}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
-                currentView === 'final-questions'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
-              }`}
-            >
-              <Trophy size={18} />
-              <span className="font-medium">Final Questions</span>
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
+
+          {/* Mobile Dropdown Menu */}
+          {mobileMenuOpen && (
+            <div className="lg:hidden pb-4 space-y-2">
+              {navItems.map(({ id, label, icon: Icon }) => (
+                <button
+                  key={id}
+                  onClick={() => handleNavClick(id)}
+                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+                    currentView === id
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+                  }`}
+                >
+                  <Icon size={20} />
+                  <span className="font-medium">{label}</span>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </nav>
 
