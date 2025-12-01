@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ pronoun, onPronounChange }) => {
             Study Thai in a Shortcut
           </p>
           <p className="text-lg text-yellow-100 mt-2">
-            Master essential Thai for your immigration interview
+            Master essential Thai for your interview
           </p>
         </div>
       </div>
