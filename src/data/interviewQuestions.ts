@@ -11,7 +11,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'sawàtdii khráp/khâ + name + age + country + favorite food/color',
     answerPhonetic: 'sawàtdii khráp/khâ chǎn/phǒm chʉ̂ʉ [name] aayú [age] pii maa càak pràthêet [country] chɔ̂ɔp [food/color]',
     answerEnglish: 'Hello, my name is [name]. I am [age] years old. I come from [country]. I like [food/color].',
-    category: 'introduction'
+    category: 'introduction',
+    extension: 'first'
   },
   {
     id: 'name-question',
@@ -22,7 +23,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm chʉ̂ʉ [name]',
     answerPhonetic: 'chǎn/phǒm chʉ̂ʉ [name]',
     answerEnglish: 'My name is [name].',
-    category: 'personal'
+    category: 'personal',
+    extension: 'first'
   },
   {
     id: 'age-question',
@@ -33,7 +35,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm aayú [age] pii',
     answerPhonetic: 'chǎn/phǒm aayú [age] pii',
     answerEnglish: 'I am [age] years old.',
-    category: 'personal'
+    category: 'personal',
+    extension: 'first'
   },
   {
     id: 'country-origin',
@@ -44,7 +47,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm maa càak pràthêet [country]',
     answerPhonetic: 'chǎn/phǒm maa càak pràthêet [country]',
     answerEnglish: 'I came from [country].',
-    category: 'background'
+    category: 'background',
+    extension: 'first'
   },
   {
     id: 'months-in-thailand',
@@ -55,7 +59,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm yùu pràthêet thay [number] dʉan lɛ́ɛw',
     answerPhonetic: 'chǎn/phǒm yùu pràthêet thay [number] dʉan lɛ́ɛw',
     answerEnglish: 'I have been living in Thailand for [number] months already.',
-    category: 'stay'
+    category: 'stay',
+    extension: 'first'
   },
   {
     id: 'when-came-thailand',
@@ -66,7 +71,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm maa pràthêet thay [number] dʉan thîi lɛ́ɛw / dʉan [month]',
     answerPhonetic: 'chǎn/phǒm maa pràthêet thay [number] dʉan thîi lɛ́ɛw / dʉan [month]',
     answerEnglish: 'I came to Thailand [number] months ago / in [month].',
-    category: 'background'
+    category: 'background',
+    extension: 'first'
   },
   {
     id: 'why-thailand',
@@ -77,7 +83,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phrɔ́ chǎn/phǒm maa rian phaasǎa thay / phrɔ́ chǎn/phǒm chɔ̂ɔp pràthêet thay',
     answerPhonetic: 'phrɔ́ chǎn/phǒm maa rian phaasǎa thay / phrɔ́ chǎn/phǒm chɔ̂ɔp pràthêet thay',
     answerEnglish: 'Because I came to study Thai language / Because I like Thailand.',
-    category: 'purpose'
+    category: 'purpose',
+    extension: 'first'
   },
   {
     id: 'why-like-thailand',
@@ -88,7 +95,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phrɔ́ aahǎan thay arɔ̀y lɛ́ khon thay cay dii',
     answerPhonetic: 'phrɔ́ aahǎan thay arɔ̀y lɛ́ khon thay cay dii',
     answerEnglish: 'Because Thai food is delicious and Thai people are kind.',
-    category: 'preferences'
+    category: 'preferences',
+    extension: 'first'
   },
   {
     id: 'study-language',
@@ -99,7 +107,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm rian phaasǎa thay',
     answerPhonetic: 'chǎn/phǒm rian phaasǎa thay',
     answerEnglish: 'I study Thai language.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'study-thai-confirm',
@@ -110,7 +119,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chây',
     answerPhonetic: 'chây',
     answerEnglish: 'Yes.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'study-days',
@@ -121,7 +131,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm rian wan [day] thʉ̌ŋ wan [day]',
     answerPhonetic: 'chǎn/phǒm rian wan [day] thʉ̌ŋ wan [day]',
     answerEnglish: 'I study from [day] to [day].',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'study-time',
@@ -132,7 +143,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm rian [time] mooŋ thʉ̌ŋ [time] mooŋ',
     answerPhonetic: 'chǎn/phǒm rian [time] mooŋ thʉ̌ŋ [time] mooŋ',
     answerEnglish: 'I study from [time] o\'clock to [time] o\'clock.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'today-day',
@@ -143,7 +155,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'wan níi wan [day]',
     answerPhonetic: 'wan níi wan [day]',
     answerEnglish: 'Today is [day].',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'today-date',
@@ -154,7 +167,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'wan níi wan thîi [date] [month]',
     answerPhonetic: 'wan níi wan thîi [date] [month]',
     answerEnglish: 'Today is [date] [month].',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'days-week',
@@ -165,7 +179,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'wan can wan aŋkhaan wan phút wan pha rʉ́hàt sa bɔɔ dii wan sùk wan sǎw wan aathít',
     answerPhonetic: 'wan can wan aŋkhaan wan phút wan pha rʉ́hàt sa bɔɔ dii wan sùk wan sǎw wan aathít',
     answerEnglish: 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'this-month',
@@ -176,7 +191,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'dʉan níi dʉan [month]',
     answerPhonetic: 'dʉan níi dʉan [month]',
     answerEnglish: 'This month is [month].',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'months-year',
@@ -187,7 +203,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'ma ka raa khom kum phaa phan mii naa khom mee sǎa yon phrʉ́t sa phaa khom mí thù naa yon ka ra ka daa khom sǐŋ hǎa khom kan yaa yon tù laa khom phrʉ́t sa cì kaa yon than waa khom',
     answerPhonetic: 'ma ka raa khom kum phaa phan mii naa khom mee sǎa yon phrʉ́t sa phaa khom mí thù naa yon ka ra ka daa khom sǐŋ hǎa khom kan yaa yon tù laa khom phrʉ́t sa cì kaa yon than waa khom',
     answerEnglish: 'January, February, March, April, May, June, July, August, September, October, November, December.',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'this-year',
@@ -198,7 +215,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'pii níi pii [year]',
     answerPhonetic: 'pii níi pii [year]',
     answerEnglish: 'This year is [year].',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'current-time',
@@ -209,7 +227,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'tɔɔnníi [time] mooŋ [minutes] naathii',
     answerPhonetic: 'tɔɔnníi [time] mooŋ [minutes] naathii',
     answerEnglish: 'It\'s now [time]:[minutes].',
-    category: 'time'
+    category: 'time',
+    extension: 'first'
   },
   {
     id: 'like-eat',
@@ -220,7 +239,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm chɔ̂ɔp kin [Thai food]',
     answerPhonetic: 'chǎn/phǒm chɔ̂ɔp kin [Thai food]',
     answerEnglish: 'I like to eat [Thai food].',
-    category: 'preferences'
+    category: 'preferences',
+    extension: 'first'
   },
   {
     id: 'like-drink',
@@ -231,7 +251,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm chɔ̂ɔp dʉ̀ʉm [drink]',
     answerPhonetic: 'chǎn/phǒm chɔ̂ɔp dʉ̀ʉm [drink]',
     answerEnglish: 'I like to drink [drink].',
-    category: 'preferences'
+    category: 'preferences',
+    extension: 'first'
   },
   {
     id: 'like-fruit',
@@ -242,7 +263,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm chɔ̂ɔp kin [fruit]',
     answerPhonetic: 'chǎn/phǒm chɔ̂ɔp kin [fruit]',
     answerEnglish: 'I like to eat [fruit].',
-    category: 'preferences'
+    category: 'preferences',
+    extension: 'first'
   },
   {
     id: 'thai-food-names',
@@ -253,7 +275,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phàt thay tômyam kûŋ kɛɛŋkhǐawwǎan sômtam maama khâawphàt phàt kàphraw laap khâaw sɔɔy mǔu pîŋ',
     answerPhonetic: 'phàt thay tômyam kûŋ kɛɛŋkhǐawwǎan sômtam maama khâawphàt phàt kàphraw laap khâaw sɔɔy mǔu pîŋ',
     answerEnglish: 'Pad Thai, Tom Yam Kung, Green Curry, Som Tam, Instant Noodles, Fried Rice, Pad Kra Pao, Laab, Khao Soi, Grilled Pork.',
-    category: 'vocabulary'
+    category: 'vocabulary',
+    extension: 'first'
   },
   {
     id: 'fruit-names',
@@ -264,7 +287,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'mamûaŋ klûay sôm ɛɛppə̂n aŋùn sàppàròt malakɔɔ thurian maŋkhút lînchîi',
     answerPhonetic: 'mamûaŋ klûay sôm ɛɛppə̂n aŋùn sàppàròt malakɔɔ thurian maŋkhút lînchîi',
     answerEnglish: 'Mango, Banana, Orange, Apple, Grape, Pineapple, Papaya, Durian, Mangosteen, Lychee.',
-    category: 'vocabulary'
+    category: 'vocabulary',
+    extension: 'first'
   },
   {
     id: 'drink-names',
@@ -275,7 +299,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'náam chaa kaafɛɛ náam sôm khôok bia náam phǒnlamáy nom chaa khǐaw chaa thay',
     answerPhonetic: 'náam chaa kaafɛɛ náam sôm khôok bia náam phǒnlamáy nom chaa khǐaw chaa thay',
     answerEnglish: 'Water, Tea, Coffee, Orange Juice, Coke, Beer, Fruit Juice, Milk, Green Tea, Thai Tea.',
-    category: 'vocabulary'
+    category: 'vocabulary',
+    extension: 'first'
   },
   {
     id: 'animal-names',
@@ -286,7 +311,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'mǎa mɛɛw cháaŋ mǔu wua kày pèt plaa nók liŋ',
     answerPhonetic: 'mǎa mɛɛw cháaŋ mǔu wua kày pèt plaa nók liŋ',
     answerEnglish: 'Dog, Cat, Elephant, Pig, Cow, Chicken, Duck, Fish, Bird, Monkey.',
-    category: 'vocabulary'
+    category: 'vocabulary',
+    extension: 'first'
   },
   {
     id: 'where-here',
@@ -297,7 +323,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'thîi nîi [location]',
     answerPhonetic: 'thîi nîi [location]',
     answerEnglish: 'Here is [location].',
-    category: 'location'
+    category: 'location',
+    extension: 'first'
   },
   {
     id: 'school-name',
@@ -308,7 +335,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'rooŋrian cùtpràkaay phaasǎa',
     answerPhonetic: 'rooŋrian cùtpràkaay phaasǎa',
     answerEnglish: 'It\'s Inspiration Language School.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'school-location',
@@ -319,7 +347,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'rooŋrian yùu thîi Maehia',
     answerPhonetic: 'rooŋrian yùu thîi Maehia',
     answerEnglish: 'The school is located at Maehia.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'study-where',
@@ -330,7 +359,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'rian thîi Maehia',
     answerPhonetic: 'rian thîi Maehia',
     answerEnglish: 'I study at Maehia.',
-    category: 'education'
+    category: 'education',
+    extension: 'first'
   },
   {
     id: 'count-numbers',
@@ -341,7 +371,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'nʉ̀ŋ sɔ̌ɔŋ sǎam sìi hâa hòk cèt pɛ̀ɛt kâaw sìp...',
     answerPhonetic: 'nʉ̀ŋ sɔ̌ɔŋ sǎam sìi hâa hòk cèt pɛ̀ɛt kâaw sìp...',
     answerEnglish: 'One, two, three, four, five, six, seven, eight, nine, ten...',
-    category: 'numbers'
+    category: 'numbers',
+    extension: 'first'
   },
   {
     id: 'how-much-this',
@@ -352,7 +383,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: '[number shown]',
     answerPhonetic: '[number shown]',
     answerEnglish: 'Give the Thai words for the number shown.',
-    category: 'numbers'
+    category: 'numbers',
+    extension: 'first'
   },
   {
     id: 'what-color',
@@ -363,7 +395,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'an níi sǐi [color]',
     answerPhonetic: 'an níi sǐi [color]',
     answerEnglish: 'This is [color].',
-    category: 'colors'
+    category: 'colors',
+    extension: 'first'
   },
   {
     id: 'pen-colors',
@@ -374,7 +407,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: '[all colors of the pen]',
     answerPhonetic: '[all colors of the pen]',
     answerEnglish: 'Giving all the colors of the pen.',
-    category: 'colors'
+    category: 'colors',
+    extension: 'first'
   },
   {
     id: 'what-is-this',
@@ -385,7 +419,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'anníi khʉʉ [object/animal/vehicle/fruit]',
     answerPhonetic: 'anníi khʉʉ [object/animal/vehicle/fruit]',
     answerEnglish: 'This is [object/animal/vehicle/fruit].',
-    category: 'identification'
+    category: 'identification',
+    extension: 'first'
   },
   {
     id: 'house-where',
@@ -396,7 +431,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'bâan yùu thîi [accommodation]',
     answerPhonetic: 'bâan yùu thîi [accommodation]',
     answerEnglish: 'My house is at [accommodation].',
-    category: 'location'
+    category: 'location',
+    extension: 'first'
   },
   {
     id: 'stay-where',
@@ -407,7 +443,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phák yùu [accommodation]',
     answerPhonetic: 'phák yùu [accommodation]',
     answerEnglish: 'I am staying at [accommodation].',
-    category: 'location'
+    category: 'location',
+    extension: 'first'
   },
   {
     id: 'stay-with-who',
@@ -432,7 +469,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'kə̀ət wanthîi [date] [month] [year]',
     answerPhonetic: 'kə̀ət wanthîi [date] [month] [year]',
     answerEnglish: 'I was born on [date] [month] [year].',
-    category: 'personal'
+    category: 'personal',
+    extension: 'second'
   },
   {
     id: 'birth-day',
@@ -443,7 +481,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'kə̀ət wan [day]',
     answerPhonetic: 'kə̀ət wan [day]',
     answerEnglish: 'I was born on [day].',
-    category: 'personal'
+    category: 'personal',
+    extension: 'second'
   },
   {
     id: 'birth-year',
@@ -454,7 +493,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'kə̀ət pii [year]',
     answerPhonetic: 'kə̀ət pii [year]',
     answerEnglish: 'I was born in [year].',
-    category: 'personal'
+    category: 'personal',
+    extension: 'second'
   },
   {
     id: 'come-with-who',
@@ -465,7 +505,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm maa khon diaw / maa kàp câwnâathîi rooŋrian',
     answerPhonetic: 'chǎn/phǒm maa khon diaw / maa kàp câwnâathîi rooŋrian',
     answerEnglish: 'I came alone / I came with the school officer.',
-    category: 'visit'
+    category: 'visit',
+    extension: 'second'
   },
   {
     id: 'officer-name',
@@ -476,7 +517,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'câwnâathîi rooŋrian chʉ̂ʉ [name]',
     answerPhonetic: 'câwnâathîi rooŋrian chʉ̂ʉ [name]',
     answerEnglish: 'The school officer\'s name is [name].',
-    category: 'visit'
+    category: 'visit',
+    extension: 'second'
   },
   {
     id: 'arrival-time',
@@ -487,7 +529,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm maa [time] mooŋ',
     answerPhonetic: 'chǎn/phǒm maa [time] mooŋ',
     answerEnglish: 'I came here at [time] o\'clock.',
-    category: 'visit'
+    category: 'visit',
+    extension: 'second'
   },
   {
     id: 'purpose-visit',
@@ -498,7 +541,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm maa tɔ̀ɔ wiisâa',
     answerPhonetic: 'chǎn/phǒm maa tɔ̀ɔ wiisâa',
     answerEnglish: 'I came here to extend my visa.',
-    category: 'purpose'
+    category: 'purpose',
+    extension: 'second'
   },
   {
     id: 'how-came',
@@ -509,7 +553,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm khàp rót maa / nâŋ rót maa',
     answerPhonetic: 'chǎn/phǒm khàp rót maa / nâŋ rót maa',
     answerEnglish: 'I drove a car to come here / I took a ride to come here.',
-    category: 'transportation'
+    category: 'transportation',
+    extension: 'second'
   },
   {
     id: 'how-return',
@@ -520,7 +565,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm cà khàp rót klàp / cà nâŋ rót klàp',
     answerPhonetic: 'chǎn/phǒm cà khàp rót klàp / cà nâŋ rót klàp',
     answerEnglish: 'I will drive my car back home / I will take a ride back home.',
-    category: 'transportation'
+    category: 'transportation',
+    extension: 'second'
   },
   {
     id: 'where-next',
@@ -531,7 +577,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm cà klàp bâan',
     answerPhonetic: 'chǎn/phǒm cà klàp bâan',
     answerEnglish: 'I will go back home.',
-    category: 'plans'
+    category: 'plans',
+    extension: 'second'
   },
   {
     id: 'eaten-yet',
@@ -542,7 +589,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm kin khâaw lɛ́ɛw / yaŋ mâydây kin',
     answerPhonetic: 'chǎn/phǒm kin khâaw lɛ́ɛw / yaŋ mâydây kin',
     answerEnglish: 'I have eaten already / I haven\'t eaten yet.',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'why-not-eaten',
@@ -553,7 +601,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phrɔ́ [reason]',
     answerPhonetic: 'phrɔ́ [reason]',
     answerEnglish: 'Because [reason].',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'what-ate',
@@ -564,7 +613,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm kin [food]',
     answerPhonetic: 'chǎn/phǒm kin [food]',
     answerEnglish: 'I ate [food].',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'restaurant-name',
@@ -575,7 +625,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'ráan aahǎan chʉ̂ʉ [restaurant name]',
     answerPhonetic: 'ráan aahǎan chʉ̂ʉ [restaurant name]',
     answerEnglish: 'The restaurant named [restaurant name].',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'restaurant-location',
@@ -586,7 +637,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'ráan aahǎan yùu thîi [location]',
     answerPhonetic: 'ráan aahǎan yùu thîi [location]',
     answerEnglish: 'The restaurant is located at [location].',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'where-ate',
@@ -597,7 +649,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'kin thîi [location]',
     answerPhonetic: 'kin thîi [location]',
     answerEnglish: 'I ate at [location].',
-    category: 'food'
+    category: 'food',
+    extension: 'second'
   },
   {
     id: 'been-hospital',
@@ -608,7 +661,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm khəəy pay / mâykhəəy pay',
     answerPhonetic: 'chǎn/phǒm khəəy pay / mâykhəəy pay',
     answerEnglish: 'I have been there / I have never been there.',
-    category: 'health'
+    category: 'health',
+    extension: 'second'
   },
   {
     id: 'hospital-purpose',
@@ -619,7 +673,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'pay [purpose: hǎa mɔ̌ɔ/sùat mon/thîaw/rian]',
     answerPhonetic: 'pay [purpose: see doctor/pray/travel/study]',
     answerEnglish: 'I go there for [purpose].',
-    category: 'activities'
+    category: 'activities',
+    extension: 'second'
   },
   {
     id: 'like-activities',
@@ -630,7 +685,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'chǎn/phǒm chɔ̂ɔp [activity]',
     answerPhonetic: 'chǎn/phǒm chɔ̂ɔp [faŋ phleeŋ/khàp rót/àan naŋsʉ̌ʉ/lên keem/duu nǎŋ]',
     answerEnglish: 'I like to [listen to music/drive cars/read books/play games/watch movies].',
-    category: 'hobbies'
+    category: 'hobbies',
+    extension: 'second'
   },
   {
     id: 'why-like-activity',
@@ -641,7 +697,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'phrɔ́ [sanùk/phɔ̀nkhlaay]',
     answerPhonetic: 'phrɔ́ [fun/relax]',
     answerEnglish: 'Because it\'s [fun/relaxing].',
-    category: 'hobbies'
+    category: 'hobbies',
+    extension: 'second'
   },
   {
     id: 'play-with-who',
@@ -652,7 +709,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'lên kàp [phʉ̂an/phîi nɔ́ɔŋ/fan/phɔ̂ɔ mɛ̂ɛ]',
     answerPhonetic: 'lên kàp [friend/siblings/boyfriend-girlfriend/parents]',
     answerEnglish: 'I play with [friend/siblings/boyfriend-girlfriend/parents].',
-    category: 'hobbies'
+    category: 'hobbies',
+    extension: 'second'
   },
 
   // Third Extension Questions (60-68)
@@ -665,7 +723,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'wan thîi hâa than waa khom',
     answerPhonetic: 'wan thîi hâa than waa khom',
     answerEnglish: 'It\'s December 5th.',
-    category: 'culture'
+    category: 'culture',
+    extension: 'third'
   },
   {
     id: 'mothers-day',
@@ -676,7 +735,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'wan thîi sìp sɔ̌ɔŋ sǐŋ hǎa khom',
     answerPhonetic: 'wan thîi sìp sɔ̌ɔŋ sǐŋ hǎa khom',
     answerEnglish: 'It\'s August 12th.',
-    category: 'culture'
+    category: 'culture',
+    extension: 'third'
   },
   {
     id: 'doi-suthep',
@@ -687,7 +747,8 @@ export const interviewQuestions: ImmigrationQuestion[] = [
     answerTemplate: 'Doi Suthep pen phuukhǎaw thaang thít tàwantòk khɔ̌ɔŋ Chiang Mai pràthêet thay sǔuŋ 1,676 meet lɛ́ pen nʉ̀ŋ nay yɔ̂ɔt khǎaw khûu khɔ̌ɔŋ phuukhǎaw granite',
     answerPhonetic: 'Doi Suthep pen phuukhǎaw thaang thít tàwantòk khɔ̌ɔŋ Chiang Mai pràthêet thay sǔuŋ 1,676 meet lɛ́ pen nʉ̀ŋ nay yɔ̂ɔt khǎaw khûu khɔ̌ɔŋ phuukhǎaw granite',
     answerEnglish: 'Doi Suthep, is a mountain west of Chiang Mai, Thailand. It is 1,676 metres in elevation and is one of the twin peaks of a granite mountain.',
-    category: 'culture'
+    category: 'culture',
+    extension: 'third'
   },
   {
     id: 'parents-location',

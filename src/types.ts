@@ -26,4 +26,5 @@ export interface ImmigrationQuestion {
   answerPhonetic: string;
   answerEnglish: string;
   category: string;
+  extension?: 'first' | 'second' | 'third';
 }

@@ -25,9 +25,12 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
   const categorizeQuestions = () => {
     const categories: { [key: string]: typeof interviewQuestions } = {};
     
-    const filteredQuestions = selectedExtension === 'all' 
-      ? interviewQuestions 
-      : interviewQuestions.filter(q => q.extension === selectedExtension);
+    let filteredQuestions;
+    if (selectedExtension === 'all') {
+      filteredQuestions = interviewQuestions;
+    } else {
+      filteredQuestions = interviewQuestions.filter(q => q.extension === selectedExtension);
+    }
     
     filteredQuestions.forEach(question => {
       if (!categories[question.category]) {
@@ -293,7 +296,7 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              First Extension ({interviewQuestions.filter(q => q.extension === 'first').length})
+              First Extension (1-38) ({interviewQuestions.filter(q => q.extension === 'first').length})
             </button>
             <button
               onClick={() => setSelectedExtension('second')}
@@ -303,7 +306,7 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              Second Extension ({interviewQuestions.filter(q => q.extension === 'second').length})
+              Second Extension (39-59) ({interviewQuestions.filter(q => q.extension === 'second').length})
             </button>
             <button
               onClick={() => setSelectedExtension('third')}
@@ -313,7 +316,7 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              Third Extension ({interviewQuestions.filter(q => q.extension === 'third').length})
+              Third Extension (60-68) ({interviewQuestions.filter(q => q.extension === 'third').length})
             </button>
           </div>
         </div>
