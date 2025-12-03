@@ -45,7 +45,7 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
   const categorizedQuestions = categorizeQuestions();
 
   const formatAnswerWithPronoun = (answer: string, phonetic: string, english: string) => {
-    const thaiAnswer = answer.replace(/ฉัน\/ผม|ผม\/ฉัน/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม');
+    const thaiAnswer = answer.replace(/ฉัน\/ผม|ผม\/ฉัน|ฉัน \/ ผม|ผม \/ ฉัน/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม');
     const phoneticAnswer = phonetic.replace(/chǎn\/phǒm|chǎn \/ phǒm|phǒm\/chǎn|phǒm \/ chǎn/g, pronoun);
     
     return { thaiAnswer, phoneticAnswer, englishAnswer: english };
