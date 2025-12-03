@@ -291,8 +291,8 @@ const SampleVocabulary: React.FC<SampleVocabularyProps> = ({ onBack, pronoun }) 
   ];
 
   const formatAnswerWithPronoun = (answer: string) => {
-    return answer.replace(/ฉัน\/ผม/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม')
-                 .replace(/chǎn\/phǒm|chǎn \/ phǒm/g, pronoun);
+    return answer.replace(/ฉัน\/ผม|ผม\/ฉัน/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม')
+                 .replace(/chǎn\/phǒm|chǎn \/ phǒm|phǒm\/chǎn|phǒm \/ chǎn/g, pronoun);
   };
 
   if (showPracticeSpeaking) {

@@ -25,7 +25,7 @@ const TopicDetail: React.FC<TopicDetailProps> = ({ topic, onComplete, onBack, is
   };
 
   const updatePronounInText = (text: string) => {
-    return text.replace(/chǎn \/ phǒm|chǎn\/phǒm/g, pronoun);
+    return text.replace(/chǎn \/ phǒm|chǎn\/phǒm|phǒm\/chǎn|phǒm \/ chǎn/g, pronoun);
   };
   // Convert romanized Thai to Thai script for speech synthesis
   const getThaiScriptForExample = (example: string): string => {

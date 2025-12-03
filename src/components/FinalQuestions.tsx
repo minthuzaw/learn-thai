@@ -37,8 +37,8 @@ const FinalQuestions: React.FC<FinalQuestionsProps> = ({ onBack, pronoun }) => {
   const categorizedQuestions = categorizeQuestions();
 
   const formatAnswerWithPronoun = (answer: string, phonetic: string, english: string) => {
-    const thaiAnswer = answer.replace(/ฉัน\/ผม/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม');
-    const phoneticAnswer = phonetic.replace(/phǒm\/chǎn|chǎn\/phǒm/g, pronoun);
+    const thaiAnswer = answer.replace(/ฉัน\/ผม|ผม\/ฉัน/g, pronoun === 'chǎn' ? 'ฉัน' : 'ผม');
+    const phoneticAnswer = phonetic.replace(/phǒm\/chǎn|chǎn\/phǒm|chǎn \/ phǒm|phǒm \/ chǎn/g, pronoun);
     
     return { thaiAnswer, phoneticAnswer, englishAnswer: english };
   };
