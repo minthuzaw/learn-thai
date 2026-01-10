@@ -1,6 +1,6 @@
-import { ImmigrationQuestion } from '../types';
+import { ThaiLanguageQuestion } from '../types';
 
-export const finalQuestions: ImmigrationQuestion[] = [
+export const finalQuestions: ThaiLanguageQuestion[] = [
   {
     id: 'final-name',
     questionThai: 'คุณชื่ออะไรคะ',

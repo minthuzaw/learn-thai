@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { ArrowLeft, Volume2, MessageSquare, User, Lightbulb } from 'lucide-react';
-import { immigrationQuestions } from '../data/immigrationQuestions';
+import { thaiLanguageQuestions } from '../data/thaiLanguageQuestions';
 
-interface ImmigrationPracticeProps {
+interface ThaiLanguagePracticeProps {
   onBack: () => void;
   pronoun: 'chǎn' | 'phǒm';
 }
@@ -84,9 +84,9 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
 
       <div className="bg-white rounded-2xl shadow-lg p-8">
         <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Thai Language Interview Practice</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Thai Language Practice</h1>
           <p className="text-gray-600 text-lg">
-            Practice common questions asked during Thai Language interviews
+            Practice common questions for Thai Language learning
           </p>
         </div>
 
@@ -96,7 +96,7 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
               <div className="flex items-start space-x-3">
                 <Lightbulb className="text-yellow-600 mt-0.5" size={20} />
                 <div>
-                  <h3 className="text-lg font-semibold text-yellow-800 mb-2">Interview Tips</h3>
+                  <h3 className="text-lg font-semibold text-yellow-800 mb-2">Thai Language Tips</h3>
                   <ul className="text-yellow-700 space-y-1 text-sm">
                     <li>• Speak clearly and slowly</li>
                     <li>• Practice your pronunciation beforehand</li>
@@ -184,7 +184,7 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
             </div>
 
             <div className="space-y-6">
-              {immigrationQuestions.map((question, index) => {
+              {thaiLanguageQuestions.map((question, index) => {
                 return (
                   <div
                     key={question.id}
@@ -264,4 +264,4 @@ const ImmigrationPractice: React.FC<ImmigrationPracticeProps> = ({ onBack, prono
   );
 };
 
-export default ImmigrationPractice;
+export default ThaiLanguagePractice;

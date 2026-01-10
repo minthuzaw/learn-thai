@@ -1,6 +1,6 @@
-import { ImmigrationQuestion } from '../types';
+import { ThaiLanguageQuestion } from '../types';
 
-export const interviewQuestions: ImmigrationQuestion[] = [
+export const interviewQuestions: ThaiLanguageQuestion[] = [
   // First Extension Questions (1-38)
   {
     id: 'introduce-yourself',

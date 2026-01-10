@@ -16,7 +16,7 @@ export interface Topic {
   tips?: string;
 }
 
-export interface ImmigrationQuestion {
+export interface ThaiLanguageQuestion {
   id: string;
   questionThai: string;
   questionPhonetic: string;
