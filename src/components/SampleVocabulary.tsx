@@ -312,7 +312,7 @@ const SampleVocabulary: React.FC<SampleVocabularyProps> = ({ onBack, pronoun }) 
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">Practice Speaking</h1>
             <p className="text-gray-600 text-lg">
-              Practice common questions and answers for immigration interviews
+              Practice common questions and answers for Thai language interviews
             </p>
           </div>
 

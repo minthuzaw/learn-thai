@@ -326,7 +326,7 @@ const InterviewQuestions: React.FC<InterviewQuestionsProps> = ({ onBack, pronoun
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Possible Questions for the Interview</h1>
           <p className="text-gray-600 text-lg">
-            Comprehensive list of questions commonly asked during Thai immigration interviews
+            Comprehensive list of questions commonly asked during Thai language interviews
           </p>
           <div className="mt-4 text-sm text-gray-500">
             {selectedExtension === 'all' 

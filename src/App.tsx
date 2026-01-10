@@ -67,9 +67,9 @@ function App() {
             onBack={() => setCurrentView('topics')}
           />
         );
-      case 'immigration':
+      case 'thai-language':
         return (
-          <ImmigrationPractice
+          <ThaiLanguagePractice
             onBack={() => setCurrentView('topics')}
             pronoun={pronoun}
           />
